@@ -38,10 +38,22 @@ export class EmployeeService {
     
    ]
 
+   currentId=8;
+
 
 
    addEmployee(emp : Employee): Observable<Employee> {
-     return this.http.post<Employee>(this.addEmpURL,emp);
+    //  return this.http.post<Employee>(this.addEmpURL,emp);
+        return new Observable<Employee>(
+          (response: Observer<Employee>)=>{
+            emp.id = this.currentId;
+            this.currentId++;
+              this.employees.push(emp);
+              response.next(emp);
+              response.complete();
+              return ()=>{};
+          }
+        );
    }
 
    getAllEmployee(): Observable<Employee[]>{
