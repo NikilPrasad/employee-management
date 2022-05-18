@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TcsEmploeesComponent } from './tcs-emploees.component';
+import { TcsEmployeesComponent } from './tcs-employees.component';
 
 describe('TcsEmploeesComponent', () => {
-  let component: TcsEmploeesComponent;
-  let fixture: ComponentFixture<TcsEmploeesComponent>;
+  let component: TcsEmployeesComponent;
+  let fixture: ComponentFixture<TcsEmployeesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TcsEmploeesComponent ]
+      declarations: [ TcsEmployeesComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TcsEmploeesComponent);
+    fixture = TestBed.createComponent(TcsEmployeesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
