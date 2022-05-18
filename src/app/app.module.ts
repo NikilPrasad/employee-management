@@ -6,10 +6,12 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
+import { TcsEmployeesComponent } from './component/tcs-emploees/tcs-emploees.component';
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    TcsEmployeesComponent
   ],
   imports: [
     BrowserModule,

@@ -29,7 +29,7 @@ export class EmployeeService {
 
    employees = [
      {id:1,name:'amal',email:'amal@tcs.com',salary:10000},
-     {id:2,name:'ajay',email:'ajay@tcs.com',salary:20000},
+     {id:2,name:'ajay',email:'ajay@gmail.com.com',salary:20000},
      {id:3,name:'akash',email:'akash@tcs.com',salary:5000},
      {id:4,name:'naveen',email:'naveen@tcs.com',salary:15000},
      {id:5,name:'kishor',email:'kishor@tcs.com',salary:30000},
@@ -64,6 +64,17 @@ export class EmployeeService {
 
     })
    }
+
+   getAllTcsEmployee(): Observable<Employee[]> {
+    return new Observable((response: Observer<Employee[]>) => {
+      const tcsEmps = this.employees.filter((emp) => {
+        return emp.email.endsWith('@tcs.com');
+      });
+      response.next(tcsEmps);
+      response.complete();
+      return () => {};
+    });
+  }
 
    updateEmployee(emp :Employee) : Observable<Employee>{
      return this.http.put<Employee>(this.updateEmpUrl, emp);

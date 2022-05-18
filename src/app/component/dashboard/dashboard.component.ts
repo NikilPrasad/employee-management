@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms'
+import { Router } from '@angular/router';
 import { Employee } from 'src/app/model/employee';
 import { EmployeeService } from 'src/app/service/employee.service';
 
@@ -15,7 +16,7 @@ export class DashboardComponent implements OnInit {
   empObj : Employee = new Employee();
   empList : Employee[] = [];
 
-  constructor(private formBuilder : FormBuilder, private empService : EmployeeService) { }
+  constructor(private formBuilder : FormBuilder, private empService : EmployeeService, private router : Router) { }
 
   ngOnInit(): void {
 
@@ -28,6 +29,10 @@ export class DashboardComponent implements OnInit {
       email: ['']
     });    
 
+  }
+
+  onReqTcsEmps() {
+    this.router.navigate(['tcs-employees']);
   }
 
   addEmployee() {
