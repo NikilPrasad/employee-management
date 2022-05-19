@@ -29,11 +29,11 @@ export class EmployeeService {
 
    employees = [
      {id:1,name:'amal',email:'amal@tcs.com',salary:10000},
-     {id:2,name:'ajay',email:'ajay@gmail.com.com',salary:20000},
+     {id:2,name:'ajay',email:'ajay@gmail.com',salary:20000},
      {id:3,name:'akash',email:'akash@tcs.com',salary:5000},
-     {id:4,name:'naveen',email:'naveen@tcs.com',salary:15000},
+     {id:4,name:'naveen',email:'naveen@gmail.com',salary:15000},
      {id:5,name:'kishor',email:'kishor@tcs.com',salary:30000},
-     {id:6,name:'abi',email:'abi@tcs.com',salary:10000},
+     {id:6,name:'abi',email:'abi@gmail.com',salary:10000},
      {id:7,name:'evan',email:'evan@tcs.com',salary:10000}  
     
    ]

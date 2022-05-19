@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TcsEmployeesComponent } from './tcs-employees.component';
 
-describe('TcsEmploeesComponent', () => {
+describe('TcsEmployeesComponent', () => {
   let component: TcsEmployeesComponent;
   let fixture: ComponentFixture<TcsEmployeesComponent>;
 
